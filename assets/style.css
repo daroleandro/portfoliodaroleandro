@@ -107,7 +107,7 @@ nav a:hover{ color: var(--text); }
 }
 
 .about-row{
-  margin-top: 48px;
+  margin-top: 36px;
   display:grid;
   grid-template-columns: 0.7fr 1fr;
   gap: 44px;
@@ -121,15 +121,35 @@ nav a:hover{ color: var(--text); }
   align-items:flex-end;
   justify-content:center;
   overflow:hidden;
+  min-height: 360px;
 }
-.about-row .about-photo img{ max-height: 340px; width:auto; }
+.about-row .about-photo img{ max-height: 360px; width:auto; }
 .about-row p{
   font-size: 18px;
   color: var(--text-dim);
   max-width: 50ch;
-  margin: 0;
+  margin: 0 0 16px;
 }
 .about-row strong{ color: var(--text); }
+.about-facts{
+  margin-top: 24px;
+  display:flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.about-facts div{ min-width: 140px; }
+.about-facts .fact-label{
+  font-size: 12.5px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 6px;
+}
+.about-facts .fact-value{
+  font-family:'Unbounded';
+  font-size: 15px;
+  font-weight: 600;
+}
 
 .hero-ctas{
   margin-top: 34px;
@@ -194,12 +214,13 @@ section{
   border-radius: var(--radius);
   overflow: hidden;
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.55fr 1fr;
 }
 .service-card .shot{
   overflow:hidden;
   background: var(--violet);
-  min-height: 260px;
+  max-height: 320px;
+  align-self: center;
 }
 .service-card .shot img{
   width:100%;
@@ -224,7 +245,7 @@ section{
 }
 @media (max-width: 720px){
   .service-card{ grid-template-columns: 1fr; }
-  .service-card .shot{ min-height: 200px; }
+  .service-card .shot{ max-height: 200px; }
 }
 
 /* ---------- Work gallery (community-manager.html) ---------- */
